@@ -2,7 +2,7 @@ NeutraXkbSwitch
  ===============
 This file descirbes NeutraXkbSwitch, along with how to install it and how to use it.
 
-This release of NeutraXkbSwitch is Version 1.0, released on the ___ of July, 2014.
+This release of NeutraXkbSwitch is Version 1.0, released on July 3, 2014.
 
 About NeutraXkbSwitch
 --------------------
