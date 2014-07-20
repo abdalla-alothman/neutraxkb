@@ -1,0 +1,7 @@
+include README
+include neutraswitch
+include flagIcons.tar.xz
+include XkbConfig.ui
+include XkbConfig.qrc
+include AppIcon.png
+include INSTALL.sh

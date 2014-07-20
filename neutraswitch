@@ -1,0 +1,8 @@
+#!/bin/bash
+NXKBPATH=/usr/bin/neutrakb.py
+if [ -f $NXKBPATH ]
+  then
+    (nohup env python3 $NXKBPATH) >/dev/null 2>&1 &
+  else
+    echo "$NXKBPATH not found."
+  fi
