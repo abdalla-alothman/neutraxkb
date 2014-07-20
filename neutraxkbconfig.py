@@ -50,6 +50,9 @@ class NeutraXkbConfig(QMainWindow):
     self.ui.buttonBox.button(QDialogButtonBox.Apply).clicked.connect(lambda: self.reloadRequested(self.mod))
     self.ui.buttonBox.button(QDialogButtonBox.Ok).clicked.connect(self.okRequest)
     self.ui.browseButton.clicked.connect(self.addCustomIcon)
+    # Actions
+    self.ui.actionSave.triggered.connect(lambda: self.reloadRequested(self.mod))
+    self.ui.actionQuit.triggered.connect(self.close)
 ###############################################################################
   @pyqtSlot()
   def addLayout(self):
