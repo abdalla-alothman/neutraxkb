@@ -52,7 +52,7 @@ class NeutraXkbConfig(QMainWindow):
     self.ui.browseButton.clicked.connect(self.addCustomIcon)
     # Actions
     self.ui.actionSave.triggered.connect(lambda: self.reloadRequested(self.mod))
-    self.ui.actionQuit.triggered.connect(self.close)
+    self.ui.actionQuit.triggered.connect(self.closeRequest)
 ###############################################################################
   @pyqtSlot()
   def addLayout(self):
@@ -68,6 +68,7 @@ class NeutraXkbConfig(QMainWindow):
     self.ui.resView.insertItem(self.ui.resView.count(), QListWidgetItem(QIcon(self.flagIcon), listInfo + " |{}|".format(self.flagInfo)))
     self.mod = True
 ######################################################################
+  @pyqtSlot()
   def okRequest(self):
     if self.mod:
       self.reloadRequested(True)
@@ -147,6 +148,7 @@ class NeutraXkbConfig(QMainWindow):
       print("File not found.")
     return x
 ###############################################################################
+  @pyqtSlot()
   def addCustomIcon(self):
     m_dir = os.path.expanduser("~/")
     customIcon = QFileDialog.getOpenFileName(self, "Select Custom Icon", m_dir, "Image Files (*.png *.jpg *.gif)")
@@ -162,6 +164,7 @@ class NeutraXkbConfig(QMainWindow):
         self.ui.flagLabel.setPixmap(icon1)
         self.flagIcon = icon1
 ###############################################################################
+  @pyqtSlot()
   def moveLangUp(self):
     currentSelection = self.ui.resView.currentRow()
     currentLang = self.ui.resView.takeItem(currentSelection)
@@ -174,6 +177,7 @@ class NeutraXkbConfig(QMainWindow):
     self.cfgInfo.upgradeSection(sectName.lower())
     self.mod = True
 ###############################################################################
+  @pyqtSlot()
   def removeLang(self):
     lang = self.ui.resView.item(self.ui.resView.currentRow()).text()
     entry = re.split(r"([A-Za-z]{2,50})\s\(?.*\[(.{2,8})\]\s.*", lang)
@@ -183,6 +187,7 @@ class NeutraXkbConfig(QMainWindow):
     self.ui.resView.takeItem(self.ui.resView.currentRow())
     self.mod = True
 ###############################################################################
+  @pyqtSlot()
   def moveLangDown(self):
     currentSelection = self.ui.resView.currentRow()
     currentLang = self.ui.resView.takeItem(currentSelection)
@@ -195,6 +200,7 @@ class NeutraXkbConfig(QMainWindow):
     self.cfgInfo.downgradeSection(sectName.lower())
     self.mod = True
 ###############################################################################
+  @pyqtSlot()
   def reloadRequested(self, sendSig=bool()):
     if sendSig == False: return
     for x in self.ui.resView.findItems("*", Qt.MatchWildcard):
@@ -218,11 +224,13 @@ class NeutraXkbConfig(QMainWindow):
       self.reloadLayouts.emit()
       self.mod = False
 ###############################################################################
+  @pyqtSlot()
   def closeRequest(self):
     self.ui.resView.clear()
     self.close()
     self.fillResView()
 ###############################################################################
+# Testing...
 if __name__ == "__main__":
   config1 = QApplication(sys.argv)
   xkbconfig = NeutraXkbConfig()

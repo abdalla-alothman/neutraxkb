@@ -1,4 +1,3 @@
-# Change to NeutraXkb
 import configparser, ast, sys, os, subprocess, re
 class NXkbCfgParser(configparser.ConfigParser):
   def __init__(self):
@@ -162,6 +161,3 @@ class NXkbCfgParser(configparser.ConfigParser):
           self.addLanguage(("{}".format(idName), '{{"name": "{}", \n"label": "{}", \n"layout": "{}", \n"icon": "{}"}}\n'.format(xname, label, lout, icon)))
       self.writeCFG()
 ###############################################################################
-if __name__ == "__main__":
-  cfg = NXkbCfgParser()
-  cfg.removeLanguage("arabic_ara")
