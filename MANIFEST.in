@@ -1,7 +1,8 @@
-include README
+include README.md
 include neutraswitch
 include flagIcons.tar.xz
 include XkbConfig.ui
 include XkbConfig.qrc
 include AppIcon.png
 include INSTALL.sh
+include LICENSE.md
