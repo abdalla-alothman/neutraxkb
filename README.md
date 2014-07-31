@@ -51,9 +51,8 @@ The config file is located in:
 
 ~/.config/neutraxkb/neutraxkb.conf
 
----
+----------
 Abdalla S. A. Alothman
 Kuwait July 3, 2014
-abdallah.alothman@gmail.com
 GSM: +965-666-22-595
 
