@@ -1,6 +1,6 @@
 NeutraXkbSwitch
 ----------------
-(sampleImages/Openbox-razor-qt-Panel.png)
+!(sampleImages/Openbox-razor-qt-Panel.png)
 
 This file descirbes NeutraXkbSwitch, along with how to install it and how to use it.
 
