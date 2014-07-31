@@ -51,7 +51,7 @@ The config file is located in:
 
 ~/.config/neutraxkb/neutraxkb.conf
 
-**Autostart**
+### Autostart ###
 *neutraxkb* is started by the a simple script named *neutraswitch*. This script
 should be installed in /usr/bin. It looks like that:
 
