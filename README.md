@@ -74,7 +74,7 @@ need to add an entry like that:
 The last "&" is not required.
 
 ----------
-Abdalla S. A. Alothman
-Kuwait July 3, 2014
-GSM: +965-666-22-595
+Abdalla S. A. Alothman    
+Kuwait July 3, 2014    
+GSM: +965-666-22-595    
 
