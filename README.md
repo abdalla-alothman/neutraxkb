@@ -55,7 +55,6 @@ The config file is located in:
 *neutraxkb* is started by the a simple script named *neutraswitch*. This script
 should be installed in /usr/bin. It looks like that:
 
-======================================================
 #!/bin/bash
 NXKBPATH=/usr/bin/neutrakb.py
 if [ -f $NXKBPATH ]
@@ -64,7 +63,6 @@ if [ -f $NXKBPATH ]
   else
     echo "$NXKBPATH not found."
   fi
-======================================================
 
 This shows that *neutraxkb* is started thrown to the background when it starts,
 therefore, it is unnecessary to edit any config files and start neutraxkb with
